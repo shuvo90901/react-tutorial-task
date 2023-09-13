@@ -7,7 +7,16 @@ function ToggleButton() {
     setIsOn(!isOn);
   };
 
-  return <button onClick={toggle}>{isOn ? "On" : "Off"}</button>;
+  return (
+    <button
+      className={`px-4 py-2 rounded ${
+        isOn ? "bg-green-500 text-white" : "bg-red-500 text-white"
+      }`}
+      onClick={toggle}
+    >
+      {isOn ? "On" : "Off"}
+    </button>
+  );
 }
 
 export default ToggleButton;
